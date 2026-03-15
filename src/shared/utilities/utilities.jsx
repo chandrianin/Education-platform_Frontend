@@ -8,3 +8,13 @@ export function RequireAuth({redirectTo = "/login"}) {
     }
     return <Outlet/>
 }
+
+export function RedirectIfAuth({redirectTo = "/main"}) {
+    const token = useAuthStore((state) => state.token)
+
+    if (token) {
+        return <Navigate to={redirectTo} replace/>
+    }
+
+    return <Outlet/>
+}
