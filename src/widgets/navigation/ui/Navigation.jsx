@@ -16,7 +16,7 @@ export const Navigation = () => {
     ];
 
     const currentTab =
-        tabs.find(tab => location.pathname.startsWith(tab.path))?.path || false;
+        tabs.find((tab) => location.pathname.startsWith(tab.path))?.path || false;
 
     const handleChange = (_, newValue) => {
         navigate(newValue);
@@ -43,7 +43,7 @@ export const Navigation = () => {
                 <Tabs
                     value={currentTab}
                     onChange={handleChange}
-                    TabIndicatorProps={{style: {display: "none"}}}
+                    slotProps={{indicator: {style: {display: "none"}}}}
                     sx={{
                         minHeight: "auto",
                         "& .MuiTabs-flexContainer": {
@@ -62,23 +62,23 @@ export const Navigation = () => {
                                 borderRadius: 3,
                                 minHeight: 36,
                                 px: 2,
-                                transition: "all 0.2s ease",
+                                transition: "all 200ms cubic-bezier(0.2, 0, 0, 1)",
 
                                 "&:hover": {
-                                    bgcolor: "action.hover",
+                                    bgcolor: "surfaceContainerHigh",
                                 },
 
                                 "&.Mui-selected": {
                                     bgcolor: "primaryContainer",
                                     color: "onPrimaryContainer",
                                     border: "1px solid",
-                                    borderColor: "primaryContainer"
-
+                                    borderColor: "primaryContainer",
                                 },
 
                                 "&:not(.Mui-selected)": {
                                     border: "1px solid",
-                                    borderColor: "divider"
+                                    borderColor: "divider",
+                                    color: "text.primary",
                                 }
                             }}
                         />

@@ -44,6 +44,34 @@ export const getTheme = (mode) => {
             surfaceContainerHigh: scheme.surfaceContainerHigh,
             surfaceContainerHighest: scheme.surfaceContainerHighest
         },
+        typography: {
+            fontFamily: [
+                "Google Sans",
+                "Roboto",
+                "Arial",
+                "sans-serif"
+            ].join(","),
+
+            titleMedium: {
+                fontSize: "1rem",
+                fontWeight: 500
+            },
+
+            bodyMedium: {
+                fontSize: "0.875rem",
+                fontWeight: 400
+            }
+        },
+        components: {
+            MuiTypography: {
+                defaultProps: {
+                    variantMapping: {
+                        titleMedium: "h6",
+                        bodyMedium: "p"
+                    }
+                }
+            }
+        }
 
 
     });
