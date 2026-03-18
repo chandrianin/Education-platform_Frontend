@@ -1,7 +1,10 @@
+import ModulesList from "../features/route/components/ModulesList.jsx";
+
 export default function MyRoutePage() {
     return (
         <div>
-            <h1>Мой маршрут</h1>
+            <ModulesList/>
         </div>
+
     )
 }
