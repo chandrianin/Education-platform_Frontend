@@ -1,7 +1,6 @@
 import {createBrowserRouter, Navigate} from "react-router-dom"
 
-import LoginPage from "../pages/LoginPage"
-import RegisterPage from "../pages/RegisterPage"
+import AuthPage from "../pages/AuthPage"
 import LibraryPage from "../pages/LibraryPage"
 import {RedirectIfAuth, RequireAuth} from "../shared/utilities/utilities.jsx";
 import {Layout} from "./Layout.jsx";
@@ -14,22 +13,12 @@ import ProfilePage from "../pages/ProfilePage.jsx";
 
 export const router = createBrowserRouter([
     {
-        path: "/login",
+        path: "/auth",
         element: <RedirectIfAuth/>,
         children: [
             {
                 path: "",
-                element: <LoginPage/>
-            }
-        ]
-    },
-    {
-        path: "/register",
-        element: <RedirectIfAuth/>,
-        children: [
-            {
-                path: "",
-                element: <RegisterPage/>
+                element: <AuthPage/>
             }
         ]
     },

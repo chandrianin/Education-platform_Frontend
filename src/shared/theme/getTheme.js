@@ -14,9 +14,6 @@ export const getTheme = (mode) => {
                 main: scheme.primary,
                 contrastText: scheme.onPrimary
             },
-            primaryContainer: scheme.primaryContainer,
-            onPrimaryContainer: scheme.onPrimaryContainer,
-
             secondary: {
                 main: scheme.secondary,
                 contrastText: scheme.onSecondary
@@ -37,9 +34,16 @@ export const getTheme = (mode) => {
                 secondary: scheme.onSurfaceVariant
             },
 
+            onSurface: scheme.onSurface,
+            onSurfaceVariant: scheme.onSurfaceVariant,
+
             divider: scheme.outlineVariant,
+
+            primaryContainer: scheme.primaryContainer,
+            onPrimaryContainer: scheme.onPrimaryContainer,
             surface: scheme.surface,
             surfaceContainer: scheme.surfaceContainer,
+            surfaceContainerVariant: scheme.surfaceContainerVariant,
             surfaceContainerLow: scheme.surfaceContainerLow,
             surfaceContainerHigh: scheme.surfaceContainerHigh,
             surfaceContainerHighest: scheme.surfaceContainerHighest

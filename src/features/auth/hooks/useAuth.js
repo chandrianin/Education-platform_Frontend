@@ -37,5 +37,7 @@ export default function useAuth() {
         clearToken()
     }
 
-    return {login, register, logout, loading, error, token}
+    const clearError = () => setError(null);
+
+    return {login, register, logout, loading, error, token, clearError}
 }
